@@ -9,6 +9,8 @@ export type TailwindProps = {
   [K in TailwindProp]?: boolean;
 };
 
+export interface TailwindPropsWithChildren extends TailwindProps, React.PropsWithChildren, React.HTMLAttributes<any> {}
+
 const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, TailwindProp>] => {
   return useMemo(() => {
     let classNames: string[] = [];

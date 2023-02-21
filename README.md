@@ -28,9 +28,9 @@ In the Stack component `flex` is defaulted to `true`
 
 import React from 'react';
 
-import useTailwind, { type TailwindProps } from 'react-use-tailwind';
+import useTailwind, { type TailwindPropsWithChildren } from 'react-use-tailwind';
 
-interface MyTailwindComponentProps extends TailwindProps, React.PropsWithChildren, React.HTMLAttributes<any> {}
+interface MyTailwindComponentProps extends TailwindPropsWithChildren {}
 
 const MyTailwindComponent: React.FC<MyTailwindComponentProps> = (tailwindProps) => {
   const [classNames, props] = useTailwind(tailwindProps);
