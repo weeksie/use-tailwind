@@ -1,0 +1,21 @@
+{
+  "name": "use-tailwind",
+  "version": "1.0.0",
+  "description": "React hook and base Stack component for use with tailwind",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --noEmit false"
+  },
+  "keywords": ["tailwind", "react", "tailwind hook"],
+  "author": "Scotty Weeks",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "react": "^18.2.0",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "@types/react": "^18.0.28",
+    "react": "^18.2.0"
+  }
+}
