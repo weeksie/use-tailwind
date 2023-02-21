@@ -29,12 +29,7 @@ import { Stack } from 'react-use-tailwind';
 
 const App = () {
   return (
-    <Stack 
-      as="h1" 
-      text-3xl
-      font-bold
-      underline
-    >
+    <Stack as="h1" text-3xl font-bold underline>
       Hello world!
     </Stack>
   )
