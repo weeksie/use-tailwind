@@ -6,7 +6,7 @@ A hook that allows you to use tailwind class names as top level properties on re
 
 import React from 'react';
 
-import useTailwind, { type TailwindProps } from './useTailwind';
+import useTailwind, { type TailwindProps } from 'react-use-tailwind';
 
 interface MyTailwindComponentProps extends TailwindProps, React.PropsWithChildren, React.HTMLAttributes<any> {}
 
@@ -25,7 +25,7 @@ There is an included `Stack` component which implements the above and
 is provided for convenience. The example from the [tailwind docs](https://tailwindcss.com/docs/guides/create-react-app) becomes:
 
 ```typescript
-import { Stack } from 'use-tailwind';
+import { Stack } from 'react-use-tailwind';
 
 const App = () {
   return (
