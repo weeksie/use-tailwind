@@ -1,5 +1,10 @@
 # useTailwind
 
+Install
+```
+pnpm add react-use-tailwind
+```
+
 A hook that allows you to use tailwind class names as top level
 properties on react components. With an included `Stack` component
 which implements the hook and is provided for convenience. The example
