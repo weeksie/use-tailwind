@@ -46,5 +46,4 @@ export default MyTailwindComponent;
 ## Limitations
 * Tailwind class names with illegal characters (`::`, `/`, etc) still
   have to be put into the `classNames` prop.
-* This is a naive implementation and uses a static array of tailwind
-  class names, so the package size is bigger than it needs to be.
+
