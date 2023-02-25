@@ -12,10 +12,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "types": [],
+    "types": ["jest"],
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom"],
     "forceConsistentCasingInFileNames": true,
   },
   "include": ["src", "node_modules/@types"]

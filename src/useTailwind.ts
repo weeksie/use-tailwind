@@ -1,17 +1,15 @@
 import { useMemo } from 'react';
-import { TailwindClassNames } from './tailwind';
+import type { TailwindClassName } from './tailwind';
 
-type TailwindProp = typeof TailwindClassNames[number];
-
-const ClassSet = new Set<TailwindProp>(TailwindClassNames);
+import ClassNames from './classNames';
 
 export type TailwindProps = {
-  [K in TailwindProp]?: boolean;
+  [K in TailwindClassName]?: boolean;
 };
 
 export interface TailwindPropsWithChildren extends TailwindProps, React.PropsWithChildren, React.HTMLAttributes<any> {}
 
-const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, TailwindProp>] => {
+const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, TailwindClassName>] => {
   return useMemo(() => {
     let classNames: string[] = [];
     let filtered = {...props};
@@ -27,10 +25,13 @@ const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, Tailwi
     }
 
     for (let prop in filtered) {
-      if (ClassSet.has(prop as TailwindProp) && !!filtered[prop]) {
+      // e.g. p-10 -> p-
+      const prefix = prop.replace(/[0-9+]$/, '');
+      if (ClassNames.has(prefix) && !!filtered[prop]) {
         classNames.push(prop);
         delete filtered[prop];
       }
+
     }
 
     const raw = (props as any).className;
