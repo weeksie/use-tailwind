@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
-import { TailwindClassNames } from './tailwind';
-const ClassSet = new Set(TailwindClassNames);
+import ClassNames from './classNames';
 const useTailwind = (props) => {
     return useMemo(() => {
         let classNames = [];
@@ -13,7 +12,9 @@ const useTailwind = (props) => {
             }
         }
         for (let prop in filtered) {
-            if (ClassSet.has(prop) && !!filtered[prop]) {
+            // e.g. p-10 -> p-
+            const prefix = prop.replace(/[0-9+]$/, '');
+            if (ClassNames.has(prefix) && !!filtered[prop]) {
                 classNames.push(prop);
                 delete filtered[prop];
             }
