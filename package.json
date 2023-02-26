@@ -1,6 +1,6 @@
 {
   "name": "react-use-tailwind",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React hook and base Stack component for use with tailwind",
   "repository": {
     "type": "git",
