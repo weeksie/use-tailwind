@@ -23,10 +23,9 @@ const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, Tailwi
         classNames.push('flex-col'); // flex column by default
       }
     }
-
     for (let prop in filtered) {
       // e.g. p-10 -> p-
-      const prefix = prop.replace(/[0-9+]$/, '');
+      const prefix = prop.replace(/[0-9]+$/, '');
       if (ClassNames.has(prefix) && !!filtered[prop]) {
         classNames.push(prop);
         delete filtered[prop];
