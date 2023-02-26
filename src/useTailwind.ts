@@ -14,15 +14,6 @@ const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, Tailwi
     let classNames: string[] = [];
     let filtered = {...props};
 
-    if (props.flex === undefined) {
-      classNames.push('flex');
-
-      if (props['flex-col'] === undefined &&
-        (!props['flex-row'] && !props['flex-row-reverse'] && !props['flex-col-reverse'])
-      ) {
-        classNames.push('flex-col'); // flex column by default
-      }
-    }
     for (let prop in filtered) {
       // e.g. p-10 -> p-
       const prefix = prop.replace(/[0-9]+$/, '');
@@ -30,7 +21,6 @@ const useTailwind = <T extends TailwindProps>(props: T): [string, Omit<T, Tailwi
         classNames.push(prop);
         delete filtered[prop];
       }
-
     }
 
     const raw = (props as any).className;
