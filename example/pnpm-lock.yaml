@@ -8,6 +8,7 @@ specifiers:
   postcss: ^8.4.21
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-use-tailwind: ../react-use-tailwind-1.0.7.tgz
   tailwindcss: ^3.2.7
   typescript: ^4.9.3
   vite: ^4.1.0
@@ -15,6 +16,7 @@ specifiers:
 dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-use-tailwind: file:../react-use-tailwind-1.0.7.tgz_pmekkgnqduwlme35zpnqhenc34
 
 devDependencies:
   '@types/react': 18.0.28
@@ -515,7 +517,6 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: true
 
   /@types/react-dom/18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
@@ -529,11 +530,9 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
-    dev: true
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: true
 
   /@vitejs/plugin-react/3.1.0_vite@4.1.4:
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
@@ -687,7 +686,6 @@ packages:
 
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
-    dev: true
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -1260,3 +1258,16 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
     dev: true
+
+  file:../react-use-tailwind-1.0.7.tgz_pmekkgnqduwlme35zpnqhenc34:
+    resolution: {integrity: sha512-dpmXKhbEOcsqfHQjDD5441u7pds7QldaM0IIlOaconj0PT6Hv+89bjSBmbICHZNpsIuq1USCkuI63tMfiKGc3Q==, tarball: file:../react-use-tailwind-1.0.7.tgz}
+    id: file:../react-use-tailwind-1.0.7.tgz
+    name: react-use-tailwind
+    version: 1.0.7
+    peerDependencies:
+      '@types/react': ^18.0.28
+      react: ^18.2.0
+    dependencies:
+      '@types/react': 18.0.28
+      react: 18.2.0
+    dev: false

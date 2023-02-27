@@ -1,6 +1,11 @@
 import React, { useMemo } from 'react';
-
 import useTailwind, { type TailwindProps } from './useTailwind';
+
+// import the basic flex styles b/c otherwise there's an edge case
+// (only using implicit flex) where the words `flex` and `flex-col`
+// don't appear in the client developer codebase and are not included 
+// in the CSS compile.
+import './flex.css';
 
 interface StackProps extends TailwindProps, React.PropsWithChildren, React.HTMLAttributes<any> {
   as?: string;
@@ -10,15 +15,14 @@ const Stack: React.FC<StackProps> = (props) => {
   const [tailwindClassNames, rest] = useTailwind(props)
   const TagName = props.as ?? 'div';
 
-  // have to shove these in `style` b/c tailwind won't add generate
-  // flex classes unless the literal values are in the app source
-  // code.
-  const flex = getFlexDefaults(props);
+  const classNames = useMemo(() => {
+    const flex = getFlexDefaults(props);
+    return [flex, tailwindClassNames].join(' ');
+  }, [props, tailwindClassNames])
 
   return (
     <TagName
-      style={flex}
-      className={tailwindClassNames}
+      className={classNames}
       {...rest}
     />
   );
@@ -30,12 +34,12 @@ const getFlexDefaults = (props: StackProps) => {
       !props['flex-row-reverse'] &&
       !props['flex-col-reverse'] &&
       props['flex-col'] === undefined) {
-        return { display: 'flex', flexDirection: 'column' };
+        return 'flex flex-col';
       }
-    return {display: 'flex'};
+    return 'flex';
   }
 
-  return {};
+  return '';
 }
 
 export default Stack;
