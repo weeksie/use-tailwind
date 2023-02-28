@@ -1,5 +1,8 @@
 # useTailwind
 
+_Gzipped (non minified) size: ~4k. The raw size is large due to
+included types for tailwind class names._
+
 Install
 ```
 pnpm add react-use-tailwind
