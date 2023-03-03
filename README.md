@@ -3,10 +3,17 @@
 _Gzipped (non minified) size: ~4k. The raw size is large due to
 included types for tailwind class names._
 
-Install
+# Installation
+
 ```
 pnpm add react-use-tailwind
 ```
+
+Assumes that you have tailwind installed on your project. See the
+[example](example) directory for a bare bones vite react tailwind
+setup.
+
+# Description
 
 A hook that allows you to use tailwind class names as top level
 properties on react components. With an included `Stack` component
@@ -29,6 +36,7 @@ export default App;
 ```
 
 In the Stack component `flex` is defaulted to `true`
+
 
 ## Hook Usage
 
