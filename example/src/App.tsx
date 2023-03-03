@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import Stack from '../../src/Stack';
+import { Stack } from 'react-use-tailwind';
 
 const App: React.FC = () => {
   return (

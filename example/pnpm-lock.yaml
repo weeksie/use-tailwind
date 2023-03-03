@@ -8,7 +8,7 @@ specifiers:
   postcss: ^8.4.21
   react: ^18.2.0
   react-dom: ^18.2.0
-  react-use-tailwind: ../react-use-tailwind-1.0.7.tgz
+  react-use-tailwind: latest
   tailwindcss: ^3.2.7
   typescript: ^4.9.3
   vite: ^4.1.0
@@ -16,7 +16,7 @@ specifiers:
 dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-use-tailwind: file:../react-use-tailwind-1.0.7.tgz_pmekkgnqduwlme35zpnqhenc34
+  react-use-tailwind: 1.0.9_pmekkgnqduwlme35zpnqhenc34
 
 devDependencies:
   '@types/react': 18.0.28
@@ -1069,6 +1069,16 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /react-use-tailwind/1.0.9_pmekkgnqduwlme35zpnqhenc34:
+    resolution: {integrity: sha512-0BIJpq/0zJm1KIamYKZo+LR9bxT07vKyFgUt/83Vpr0jV+dsX3tdJdbTaqJGZjZnOThm9Dw7b98991sgiN6oYw==}
+    peerDependencies:
+      '@types/react': ^18.0.28
+      react: ^18.2.0
+    dependencies:
+      '@types/react': 18.0.28
+      react: 18.2.0
+    dev: false
+
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -1258,16 +1268,3 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
     dev: true
-
-  file:../react-use-tailwind-1.0.7.tgz_pmekkgnqduwlme35zpnqhenc34:
-    resolution: {integrity: sha512-dpmXKhbEOcsqfHQjDD5441u7pds7QldaM0IIlOaconj0PT6Hv+89bjSBmbICHZNpsIuq1USCkuI63tMfiKGc3Q==, tarball: file:../react-use-tailwind-1.0.7.tgz}
-    id: file:../react-use-tailwind-1.0.7.tgz
-    name: react-use-tailwind
-    version: 1.0.7
-    peerDependencies:
-      '@types/react': ^18.0.28
-      react: ^18.2.0
-    dependencies:
-      '@types/react': 18.0.28
-      react: 18.2.0
-    dev: false
