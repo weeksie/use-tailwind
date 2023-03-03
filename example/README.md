@@ -9,4 +9,3 @@ pnpm dev
 ```
 
 ![Screenshot of running example](./screenshot.png)
-
